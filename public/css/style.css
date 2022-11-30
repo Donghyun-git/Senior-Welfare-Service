@@ -9,27 +9,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&display=swap');
 
 /* 헤더 */
-#header { display: flex; justify-content: space-between; align-items: center;}
-#header .header-tit {}
-#header .header-tit h1 { font-size: 24px; color: #fff; font-family: 'Cormorant Upright', serif;}
+#header { width: 100%; padding: 30px 50px 30px 50px; display: flex; justify-content: space-between; align-items: center;}
+#header .header { width: 100%; max-width: 1280px; display: flex; align-items: center;}
+#header .header-tit h1 { font-size: 28px; color: #000; font-family: 'Cormorant Upright', serif;}
 
-#header .header-menu { }
-.header-menu .menu {}
-.header-menu .menu ul {}
-.header-menu .menu ul li { display: inline; padding: 4px 28px; }
-.header-menu .menu ul li a { color: #fff; transition: 0.3s; -webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s;}
-.header-menu .menu ul li a:hover { color: #ffc0cb;}
+.header-menu .menu ul { margin-left: 32px; }
+.header-menu .menu ul li { position: relative; display: inline; cursor: pointer; padding: 4px 20px;}
+.header-menu .menu ul li:before { 
+    content: "";
+    width: 85%;
+    height: 2px;
+    background-color: #ffc0cb;
+    position: absolute;
+    bottom: 0;
+    left: 9px;
+    opacity: 0;
+    transition: 0.5s; 
+    -webkit-transition: 0.5s;
+    -moz-transition-duration: 0.5s;
+}
+.header-menu .menu ul li:hover:before { opacity: 1; }
+.header-menu .menu ul li a { font-size: 12px; color: #000; }
 
-#header .login { }
-.login ul {}
-.login ul li { display: inline; padding: 4px 14px; }
-.login ul li a { color: #fff;}
+.login ul { width: 100px;}
+.login ul li { position: relative; display: inline; padding: 4px 14px; }
+.login ul li:first-child:before { 
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #dbdbdb;
+    position: absolute;
+    top: 9px;
+    right: -2px;
+ }
+.login ul li a { color: #000;}
 
 /* 컨텐츠 섹션 */
+#section { width: 100%; height: 600px; background: url("../img/background.jpeg") center top / cover no-repeat; background-size: cover;}
 
 /* 푸터 */
-#footer { border-top: 1px solid #dbdbdb }
-.footer { text-align: center; padding: 20px 50px; font-size: 10px;}
+#footer { width: 100%; border-top: 1px solid #dbdbdb }
+.footer { max-width: 1280px; text-align: center; padding: 20px 50px; font-size: 10px;}
 .footer li { position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap;}
 .footer address { padding-top: 15px;}
 .footer li:before { content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left:0; top: 2px;}

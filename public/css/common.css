@@ -13,10 +13,9 @@ h1#title {position: absolute; width: 0; height: 0; text-indent: -999rem; left: -
 
 /* common */
 html, body {display: block; width: 100%; height: 100%;}
-body { background: #f5f5f5;}
-#wrap { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden; height: 100vh; overflow-y: auto; background: #fff;}
+#wrap { position: relative; width: 100%; margin: 0 auto; overflow: hidden; height: 100vh; overflow-y: auto; background: #fff;}
 #contents { padding-top: 55px; position: relative;  -webkit-transition: all 0.4s; transition: all 0.4s;}
-#inner { height: 530px; background-color: rgb(80, 60, 60); padding: 30px 50px; position: relative; text-align: center; -webkit-transition: all 0.3s; transition: all 0.3s;}
+#inner {  width: 100%; position: relative; text-align: center; -webkit-transition: all 0.3s; transition: all 0.3s;}
 .container {padding-left: 20px; padding-right: 20px; position: relative;}
 .container:after {content: ''; display: table; clear: both;}
 
