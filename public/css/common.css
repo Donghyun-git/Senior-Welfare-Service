@@ -14,11 +14,9 @@ h1#title {position: absolute; width: 0; height: 0; text-indent: -999rem; left: -
 /* common */
 html, body {display: block; width: 100%; height: 100%;}
 body { background: #f5f5f5;}
-#wrap { position: relative; width: 100%; max-width: 720px; margin: 0 auto; overflow: hidden; height: 100vh; overflow-y: auto; background: #fff;}
+#wrap { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden; height: 100vh; overflow-y: auto; background: #fff;}
 #contents { padding-top: 55px; position: relative;  -webkit-transition: all 0.4s; transition: all 0.4s;}
-#inner { position: relative; -webkit-transition: all 0.3s; transition: all 0.3s;}
-#fix-inner, #more-inner {padding: 0 10px; position: relative; -webkit-transition: all 0.3s; transition: all 0.3s;}
-#map-inner { padding: 0;}
+#inner { height: 530px; background-color: rgb(80, 60, 60); padding: 30px 50px; position: relative; text-align: center; -webkit-transition: all 0.3s; transition: all 0.3s;}
 .container {padding-left: 20px; padding-right: 20px; position: relative;}
 .container:after {content: ''; display: table; clear: both;}
 
@@ -81,5 +79,14 @@ body { background: #f5f5f5;}
 .border-top__none {border-top: none !important;}
 .mw100{width:100%; max-width: 100%;}
 .border-top__2 {border-top: solid 2px var(--color-light-gray);}
+
+/* 의미있는 이미지의 대체 텍스트를 제공하는 경우*/
+.ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+
+/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 /*/
+.ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할 때*/
+.ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
 
 
