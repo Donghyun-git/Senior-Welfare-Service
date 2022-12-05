@@ -6,7 +6,7 @@ const router = express.Router();
 
 const ctrl = require("./home.ctrl");
 
-// 관리자
+// 렌더링
 router.get("/", ctrl.output.index);
 router.get("/welfare_status", ctrl.output.welfare_status);
 router.get("/news", ctrl.output.news);

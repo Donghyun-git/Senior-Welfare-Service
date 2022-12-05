@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeniorWS</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="wrap">
@@ -20,10 +20,10 @@
                         <nav class="menu">
                             <h2 class="ir_su">메뉴</h2>
                             <ul>
-                            <li><a href="./welfare_status.html"><b>복지 센터 현황</b>Welfare-Status</a></li> 
-                            <li><a href="./news.html"><b>노인 관련 이슈</b>News & Issues</a></li> 
-                            <li><a href="./work_info.html"><b>일자리 현황</b>Work-INFO</a></li> 
-                            <li><a href="./free.html">무료급식소 현황</a></li> 
+                            <li><a href="welfare_status"><b>복지 센터 현황</b>Welfare-Status</a></li> 
+                            <li><a href="news"><b>노인 관련 이슈</b>News & Issues</a></li> 
+                            <li><a href="work_info"><b>일자리 현황</b>Work-INFO</a></li> 
+                            <li><a href="free">무료급식소 현황</a></li> 
                             </ul>
                         </nav>
                     </div>
@@ -35,8 +35,11 @@
                     </ul>
                 </div>
             </header>
-            <section id="section">
-                <h1></h1>
+            <section id="map_section">
+                <h3 class="mat_tit">마커를 클릭하면 정보가 나옵니다.</h3>
+                <h3 class=""> 로딩중 입니다... (소요시간 10~20초)</h3>
+                <div id="map" style="display: none; width: 1100px; height: 600px; margin: 30px 50px;"></div>
+                <div class="lwder" lwder="..." lwderspeed="300">page is loading </div>
             </section>
         </div>
         <footer id="footer">
@@ -58,5 +61,15 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=se5rcmbh22&submodules=geocoder"></script>
+    <script src="js/map.js"></script>
+    <script src="js/lwder.js"></script>
+    <script src="js/lwder.min.js"></script>
+    <script>
+        let lwder = document.querySelector('.lwder');
+        document.addEventListener("DOMContentLoaded", function() {
+            new Lwder({ selector: lwder });
+        });
+    </script>
 </body>
 </html>
