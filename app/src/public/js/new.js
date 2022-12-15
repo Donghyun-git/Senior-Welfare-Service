@@ -1,6 +1,6 @@
 let news = [];
 let page = 1;
-let total_page = 0;
+let total_pages = 0;
 let url;
 let keyword = "노인";
 
@@ -12,6 +12,8 @@ const getNews = async () => {
     let header = new Headers({
       'x-api-key': '46-vEQGiLyDmpA7w0esNwo0LENLzX9c50w3IopGS2k8'
     });
+
+    url.searchParams.set('page', page); //page 라는 쿼리에 page값 추가 ex) &page= xx
 
     let response = await fetch(url, {
       headers: header
@@ -92,20 +94,48 @@ const errorRender = (message) => {
 }
 
 const pagination = () => {
-    let paginationHTML = '';
+    let paginationHTML = `<li>
+    <a href="#" onclick="movePage(${page-1})" aria-label="Previous">
+      <span aria-hidden="true">&lt;</span>
+    </a>
+</li>`;
+
     //total _page
     //page
     //page group
     let pageGroup = Math.ceil(page/5);
+
     //last
     let last = pageGroup * 5;
+
     //first
     let first = last - 4;
+
     //first~last 페이지 프린트
+    
+    //nextbutton
+    
+  
 
     for(let i=first; i<=last; i++){
-      paginationHTML += `<li class="page-item"><a class="page-link" href="#">${i}</a></li>`
+      paginationHTML += `
+      <li class="page-item ${page==i?"active": ""}"><a class="page-link" onclick="movePage(${i})">${i}</a></li>`
     }
 
+      paginationHTML += `<li>
+      <a href="#" onclick="movePage(${page+1})" aria-label="Next">
+        <span aria-hidden="true">&gt;</span>
+      </a>
+  </li>`;
+
     document.querySelector(".pagination").innerHTML = paginationHTML;
+
+};
+
+const movePage = (pageNum) => {
+  page = pageNum;
+  
+  getNews();
 }
+
+

@@ -17,6 +17,7 @@ label,img,input,select,textarea,button,input[type=textarea]{vertical-align:middl
 hr{display:none;}
 main,header,section,nav,footer,aside,article,figure{display:block;}
 a{color:#333; text-decoration:none;}
+a:hover { text-decoration: none;}
  
 .clear {clear:both;}
 .clear:after { content:""; display:block; clear:both;}

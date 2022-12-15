@@ -1,7 +1,6 @@
 @import "animate.min.css";
 @import "fonts.css";
 @import "font-awesome.css";
-@import "swiper-bundle.min.css";
 @import "common.css";
 @import "default.css";
 
@@ -26,7 +25,7 @@
     opacity: 0;
     transition: 0.5s; 
     -webkit-transition: 0.5s;
-    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
 }
 .header-menu .menu ul li:hover:before { opacity: 1; }
 .header-menu .menu ul li:hover b { opacity: 1;}
@@ -47,7 +46,16 @@
 .login ul li a { color: #000;}
 
 /* 컨텐츠 섹션 */
-#section { width: 100%; height: 600px; background: url("../img/background.jpeg") center top / cover no-repeat; background-size: cover;}
+
+
+ /* swiper */
+ .swiper { width: 100%; height: 600px;}
+ .swiper .ss1 { background: url(../img/background.jpeg) no-repeat center center; background-size: cover;}
+ .swiper .ss2 { background: url(../img/background.jpeg) no-repeat center center; background-size: cover;}
+ .swiper .ss3 { background: url(../img/background.jpeg) no-repeat center center; background-size: cover;}
+ .swiper .ss4 { background: url(../img/test.jpg) no-repeat center center; background-size: cover;}
+ .swiper .ss5 { background: url(../img/background.jpeg) no-repeat center center; background-size: cover;}
+ .swiper .ss6 { background: url(../img/background.jpeg) no-repeat center center; background-size: cover;}
 
 /* map */
 #map_section { margin: 0 auto; text-align: center; }
@@ -61,6 +69,20 @@
     font-size: 13px;
 }
 .marker_info > h6 { font-size: 5px;}
+
+/* freefood view */
+.free_wrap { display: flex; justify-content: space-between; flex-direction: column;}
+.free_wrap .free_tit h2 { font-size: 24px; font-weight: 500; }
+.free_wrap .free_cont { margin: 30px 0 10px 0; }
+.free_cont ul { display: flex; justify-content: center; flex-wrap: wrap;}
+.free_cont ul li { position: relative; width: 300px; height: 275px; padding: 19px 25px; margin: 0 0 20px 20px; border: 1px solid #e0e0e0;}
+.free_cont ul li:first-child { margin-left: 0;}
+.free_cont ul li:nth-child(4) { margin-left: 0;}
+.free_cont ul li a { text-align: left; line-height: 2;}
+.free_cont ul li a dl dt { font-size: 18px; font-weight: 400;}
+.free_cont ul li a dl dd { font-size: 16px; font-weight: 300;}
+.free_cont ul li a .picture { text-align: right;}
+.free_cont ul li a .picture img { position: absolute; bottom: 7px; right: 7px; width: 125px; height: 125px; border-radius: 100%; border: 3px solid #ddd; }
 
 /* article */
 
@@ -109,7 +131,8 @@
   }
 
   .pagination { display: flex; justify-content: center; font-size: 13px;} 
-  .pagination .page-item { padding: 10px 10px;}
+  .pagination .page-item { padding: 0 0 10px 10px;}
+  .pagination li:last-child { padding-left: 10px;}
 
 
 /* 푸터 */

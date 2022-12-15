@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeniorWS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -36,10 +37,24 @@
                 </div>
             </header>
             <section id="section">
-                <h1></h1>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                        <div class="swiper-slide ss1"></div>
+                        <div class="swiper-slide ss2"></div>
+                        <div class="swiper-slide ss3"></div>
+                        <div class="swiper-slide ss4"></div>
+                        <div class="swiper-slide ss5"></div>
+                        <div class="swiper-slide ss6"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
         </div>
-        <footer id="footer">
+        <footer id="footer" style="border: none;">
             <div class="footer">
                 <ul>
                     <li><a href="#">사이트 도움말</a></li>
@@ -58,5 +73,25 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed: 1000,
+            spaceBetween: 100,
+            autoplay: {
+                delay: 2000,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+        });
+    </script>
 </body>
 </html>
