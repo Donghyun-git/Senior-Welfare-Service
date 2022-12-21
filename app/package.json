@@ -24,13 +24,17 @@
     "async": "^3.2.4",
     "axios": "^1.2.0",
     "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-mysql-session": "^2.1.8",
+    "express-session": "^1.17.3",
     "mysql": "^2.18.1",
     "mysqli": "^3.1.4",
     "nodemon": "^2.0.20",
     "qs": "^6.11.0",
     "url": "^0.11.0",
-    "view-engine": "^1.1.1"
+    "view-engine": "^1.1.1",
+    "window-popup": "^1.1.0"
   }
 }

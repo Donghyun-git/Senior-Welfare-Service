@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeniorWS</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="wrap">
@@ -20,26 +21,34 @@
                         <nav class="menu">
                             <h2 class="ir_su">메뉴</h2>
                             <ul>
-                            <li><a href="welfare_status"><b>복지 센터 현황</b>Welfare-Status</a></li> 
-                            <li><a href="news"><b>노인 관련 이슈</b>News & Issues</a></li> 
-                            <li><a href="work_info"><b>일자리 현황</b>Work-INFO</a></li> 
-                            <li><a href="free">무료급식소 현황</a></li> 
+                                <li><a href="welfare_status"><b>복지 센터 현황</b>Welfare-Status</a></li> 
+                                <li><a href="news"><b>노인 관련 이슈</b>News & Issues</a></li> 
+                                <li><a href="free"><b>무료급식소</b>FREE-FOOD</a></li> 
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="login">
-                    <ul>
-                        <li><a href="#"><span class="ir_su">로그인</span><i class="fa fa-sign-in" aria-hidden="true" title="로그인"></i></a></li>
-                        <li><a href="#"><span class="ir_su">회원가입</span><i class="fa fa-user-plus" aria-hidden="true" title="회원가입"></i></a></li>
-                    </ul>
-                </div>
+                    <div class="login ok">
+                            <b>환영합니다 <br> <%= name %> 님!</b>
+                           <div class="logout"> <a href="/logout" class="mt10" style="font-size: 10px; text-decoration: underline;"> 로그아웃 </a></div>
+                    </div>
+                
             </header>
             <section id="section">
-                <h1></h1>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ss1"></div>
+                        <div class="swiper-slide ss2"></div>
+                        <div class="swiper-slide ss3"></div>
+                        <div class="swiper-slide ss4"></div>
+                        <div class="swiper-slide ss5"></div>
+                        <div class="swiper-slide ss6"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
         </div>
-        <footer id="footer">
+        <footer id="footer" style="border: none;">
             <div class="footer">
                 <ul>
                     <li><a href="#">사이트 도움말</a></li>
@@ -58,5 +67,18 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed: 1000,
+            spaceBetween: 100,
+            autoplay: {
+                delay: 2000,
+            },
+        });
+    </script>
 </body>
 </html>

@@ -32,14 +32,14 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=search] {height: 46px; padding: 0 15px; display: block; width: 100%; background: #fff; border-radius: 4px; border: solid 1px #ddd; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
-
+input[type=button] { color: #fff; height: 46px; padding: 0 15px; display: block; width: 100%; background: #ffc0cb; border-radius: 4px;  border: solid 1px #ddd; -webkit-appearance: none; -moz-appearance: none; appearance: none; cursor: pointer; border:none;}
 
 input[type=tel]:focus,
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus, 
-input[type=search]:focus {outline: solid 2px #0db565;}
-input[type=textarea]:focus {outline: solid 2px #0db565;}
+input[type=search]:focus {outline: solid 2px #ffc0cb;}
+input[type=textarea]:focus {outline: solid 2px #ffc0cb;}
 
 input[type=tel]::placeholder,
 input[type=text]::placeholder,

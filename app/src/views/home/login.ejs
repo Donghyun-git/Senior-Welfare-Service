@@ -34,34 +34,27 @@
                     </ul>
                 </div>
             </header>
-            <section id="map_section">
-                <h3 class="map_tit" style="display: none;">마커를 클릭하면 정보가 나옵니다.</h3>
-                <div id="map" style="position: relative; width: 1100px; height: 600px; margin: 30px 50px;"></div>
-                <div class="box">
-                    <div class="loader4"> <br><br><span>지도가 로딩중이에요</span></div>
-                  </div>
+            <section id="login_section">
+                <form action="/login" method="post">
+                    <div class="login_area">
+                        <h2 class="login_tit">  방문이 처음이신가요? <br>
+                            우측 상단 버튼을 통해 회원가입 해주세요!</h2>
+                        <div class="group_id">
+                            <label for="id" class="form_label">아이디</label>
+                            <input type="text" name="id" id="id" placeholder="아이디">
+                        </div>
+                        <div class="group_pw">
+                            <label for="password" class="form_label">비밀번호</label>
+                            <input type="password" name="password" id="password" placeholder="비밀번호">
+                        </div>
+                        <div class="group_btn">
+                            <input type="submit" value="로그인" id="login_btn">
+                        </div>
+                    </div>
+                </form>
+                    
             </section>
         </div>
-        <footer id="footer">
-            <div class="footer">
-                <ul>
-                    <li><a href="#">사이트 도움말</a></li>
-                    <li><a href="#">사이트 이용약관</a></li>
-                    <li><a href="#">사이트 운영원칙</a></li>
-                    <li><a href="#"><strong>개인정보취급방침</strong></a></li>
-                    <li><a href="#">책임의 한계와 법적고지</a></li>
-                    <li><a href="#">게시중단요청서비스</a></li>
-                    <li><a href="#">고객센터</a></li>
-                </ul>
-                <address>
-                    Copyright ©
-                    <a href="https://github.com/Donghyun-git"><strong>dongs</strong></a>
-                    All Rights Reserved.
-                </address>
-            </div>
-        </footer>
     </div>
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=se5rcmbh22&submodules=geocoder"></script>
-    <script src="js/map.js"></script>
 </body>
 </html>

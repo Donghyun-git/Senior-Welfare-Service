@@ -10,19 +10,28 @@ const output = {
     news: (req, res) => {
         res.render("home/news");
     },
-    work_info: (req, res) => {
-        res.render("home/work_info");
-    },
     free: (req, res) => {
         res.render("home/free");
     },
+    popup: (req, res) => {
+        res.render("home/popup");
+    },
+    login: (req, res) => {
+        res.render("home/login");
+    },
+    signup: (req, res) => {
+        res.render("home/signup");
+    },
+    loginok: (req, res) => {
+        res.render("home/loginok");
+    }
 };
 
 
 
-
 module.exports = {
-    output
+    output,
+
 };
 
 

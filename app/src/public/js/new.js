@@ -10,7 +10,7 @@ let keyword = "노인";
 const getNews = async () => {
   try {
     let header = new Headers({
-      'x-api-key': '46-vEQGiLyDmpA7w0esNwo0LENLzX9c50w3IopGS2k8'
+      'x-api-key': 'Qkappbw2g6rNrOFicEIPF28pv874hV1X6BW3B-oRwe0'
     });
 
     url.searchParams.set('page', page); //page 라는 쿼리에 page값 추가 ex) &page= xx
