@@ -61,20 +61,20 @@ setTimeout(() => {
 
         function getClickHandler(seq) {
     
-        return function(e) {  // 마커를 클릭하는 부분
-            var marker = markers[seq], // 클릭한 마커의 시퀀스로 찾는다.
-                infoWindow = infoWindows[seq]; // 클릭한 마커의 시퀀스로 찾는다
+        return function(e) {  
+            var marker = markers[seq], 
+                infoWindow = infoWindows[seq]; 
     
             if (infoWindow.getMap()) {
                 infoWindow.close();
             } else {
-                infoWindow.open(map, marker); // 표출
+                infoWindow.open(map, marker); 
             }
         }
         }
     
         for (var i=0, j=markers.length; i<j; i++) {
-        naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i)); // 클릭한 마커 핸들러
+        naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i)); 
         }
 }, 17000);
 

@@ -154,16 +154,6 @@ app.get('/popup0', function(req, res){
     });
 });
 
-app.get('/popup0', function(req, res){
-    res.render("home/popup", {
-        name: data[0].name,
-        adr: data[0].roadAdr,
-        tel: data[0].tel,
-        time: data[0].foodtime,
-        day: data[0].day,
-        who: data[0].who,
-    });
-});
 
 app.get('/popup1', function(req, res){
     res.render("home/popup", {

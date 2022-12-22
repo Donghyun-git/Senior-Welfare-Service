@@ -4,8 +4,6 @@ let total_pages = 0;
 let url;
 let keyword = "노인";
 
-//각 함수에서 필요한 url을 만든다.
-//api 호출 함수를 부른다.
 
 const getNews = async () => {
   try {
@@ -13,11 +11,11 @@ const getNews = async () => {
       'x-api-key': 'Qkappbw2g6rNrOFicEIPF28pv874hV1X6BW3B-oRwe0'
     });
 
-    url.searchParams.set('page', page); //page 라는 쿼리에 page값 추가 ex) &page= xx
+    url.searchParams.set('page', page); 
 
     let response = await fetch(url, {
       headers: header
-    }) //ajax, http, fetch
+    }) 
     let data = await response.json()
     console.log(response)
     console.log(data)
@@ -40,7 +38,7 @@ const getNews = async () => {
   }
 }
 
-const getLatestNews = async () => { //비동기 처리, 기존 동기적 언어인 js에서 await을 사용하려면 비동기처리를 선언하는 async를 같이 써주어야 함.
+const getLatestNews = async () => { 
 
     url = new URL(
     `https://api.newscatcherapi.com/v2/search?q=${keyword}' &countries=KR&page_size=10`
@@ -100,21 +98,16 @@ const pagination = () => {
     </a>
 </li>`;
 
-    //total _page
-    //page
-    //page group
+    
     let pageGroup = Math.ceil(page/5);
 
-    //last
+   
     let last = pageGroup * 5;
 
-    //first
+ 
     let first = last - 4;
 
-    //first~last 페이지 프린트
-    
-    //nextbutton
-    
+
   
 
     for(let i=first; i<=last; i++){
